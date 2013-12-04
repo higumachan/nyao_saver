@@ -1,0 +1,23 @@
+{
+	"name": "nyao saver",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "nyaoがかわいそうだ",
+
+	"permissions": [
+		"http://*/*",
+		"tabs"
+	],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "icon",
+		"default_popup": "popup.html"
+	},
+
+	"content_scripts": [
+	{
+		"matches": ["http://*.hatenablog.com/*"],
+		"js": ["myscript.js"]
+	}
+	]
+}
